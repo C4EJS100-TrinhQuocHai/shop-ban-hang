@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.15.1-web/fontawesome-free-5.15.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="home_app">
+        <!-- Header -->
+        <header class="header">
+            <ul class="header-items">
+                <li class="header-item">
+                    <a href="" class="header-item-link logo">Shopaholic</a>
+                </li>
+                <li class="header-item">
+                    <input class="search-bar" type="search" placeholder="Nhập để tìm kiếm">
+                    <button class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </li>
+                <li class="header-item">
+                    <a href="" class="header-item-link header-cart">
+                        <i class="header-cart-icon fas fa-shopping-cart"></i>
+                        Giỏ hàng
+                    </a>
+                </li>
+                <li class="header-item">
+                    <a class="header-item-link header-login" onclick="document.getElementById('login').style.display='block'">
+                        Đăng nhập
+                    </a>
+                </li>
+                <li class="header-item">
+                    <a class="header-item-link header-signup" onclick="document.getElementById('signup').style.display='block'">
+                        Đăng ký
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        <!-- Banner -->
+        <div class="banner">
+            <!-- Images -->
+            <div class="slides fade">
+                <img class="banner-images" src="images/banner/banner-1.jpg" alt="Banner-1" style="width: 60%">
+            </div>
+            <div class="slides fade">
+                <img class="banner-images" src="images/banner/banner-2.jpg" alt="Banner-2" style="width: 60%">
+            </div>
+            <div class="slides fade">
+                <img class="banner-images" src="images/banner/banner-3.jpg" alt="Banner-3" style="width: 60%">
+            </div>
+            <div class="slides fade">    
+                <img class="banner-images" src="images/banner/banner-4.jpg" alt="Banner-4" style="width: 60%">
+            </div>
+            <div class="slides fade">    
+                <img class="banner-images" src="images/banner/banner-5.jpg" alt="Banner-4" style="width: 60%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- Dots -->
+        <div class="slides-dot" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        
+
+        <!-- Phần thân -->
+        <div class="container" style="background-color: #f5f5f5;">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category_heading">
+                                <i class="category_heading-icon fas fa-list"></i>
+                                Danh mục sản phẩm
+                            </h3>
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a id="all" class="category-item__link">Tất cả sản phẩm</a>
+                                <li class="category-item category-item">
+                                    <a id="thietBiDienTu" class="category-item__link">Thiết bị điện tử</a>
+                                </li>
+                                <li class="category-item">
+                                    <a id="sach" class="category-item__link">Sách</a>
+                                </li>
+                                <li class="category-item">
+                                    <a id="doTieuDung" class="category-item__link">Đồ tiêu dùng</a>
+                                </li>
+                                <li class="category-item">
+                                    <a id="thoiTrang" class="category-item__link">Thời trang</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="grid__column-10">
+                        <div class="product">
+                            <div id="product_items" class="grid__row">
+                                <!-- Product item -->
+                                <!-- <div class="grid__column-2-4">
+                                    <a class="product-item" href=#>
+                                        <div class="product-item_img" style="background-image: url(https://www.viendongmobile.com/vnt_upload/product/07_2020/Untitled-1.png);"></div>
+                                        <h4 class="product-item_name">Iphone 12 Pro Max</h4>
+                                        <div class="product-item_price">30.000.000đ</div>
+                                        <div class="product-item_action">
+                                            <span class="product-item_like">
+                                                <i class="far fa-heart"></i>
+                                            </span>
+                                            <div class="product-item_rating">
+                                                <i class="product-item_star-gold fas fa-star"></i>
+                                                <i class="product-item_star-gold fas fa-star"></i>
+                                                <i class="product-item_star-gold fas fa-star"></i>
+                                                <i class="product-item_star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="product-item_sold">50 đã bán</span>
+                                        </div>
+                                        <div class="product-item_origin">
+                                            <span class="product-item_brand">Apple</span>
+                                            <span class="product-item_place">Hà Nội</span>
+                                        </div>
+                                    </a>
+                                </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-4">
+                        <h3 class="footer_heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">Hướng dẫn mua hàng</a>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer_heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">Điều khoản</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">Chính sách bảo mật</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">Tuyển dụng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer_heading">Danh mục sản phẩm </h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">Thời trang</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">Đồ tiêu dùng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">Thiết bị điện tử</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">Sách</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer_heading">Theo dõi chúng tôi</h3> 
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">
+                                    <i class="footer-item_icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">
+                                    <i class="footer-item_icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item_link">
+                                    <i class="footer-item_icon fab fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                        </ul> 
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer_heading">Đội ngũ phát triển</h3>
+                        <ul class="footer-list">
+                            
+                            <li class="footer-item">
+                                <span class="footer-item_member">Trịnh Quốc Hai</span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <!-- Login -->
+    <div id="login" class="modal">
+        <form action="/action_page.php" method="POST" class="modal-content">
+            <div class="login-container">
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">x</span>
+                <h2>Đăng nhập</h2>
+                <input class="login-username" type="text" placeholder="Tên đăng nhập" name="username" required><br><br>
+                <input class="login-password" type="password" placeholder="Mật khẩu" name="password" required><br><br>
+                <button type="button" class="cancelbtn" onclick="document.getElementById('login').style.display='none'">Thoát</button>
+                <button type="submit" class="loginbtn">Đăng nhập</button>
+                <div class="login-footer">
+                    <p>Bạn chưa là thành viên? <a href="#">Đăng ký</a></p>
+                    <p><a href="#">Quên mật khẩu/Tên đăng nhập</a></p>
+                </div>    
+            </div>
+        </form>
+    </div>
+
+    <!-- Signup -->
+    <div id="signup" class="modal">
+        <form action="/action_page/php" class="modal-content">
+            <div class="signup-container">
+                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close">x</span>
+                <h2>Đăng ký</h2>
+                <p style="font-size: 2rem;">Vui lòng điền đầy đủ các thông tin sau</p>
+                <input type="text" class="signup-firstName" placeholder="Họ" name="firstname" required>
+                <input type="text" class="signup-lastName" placeholder="Tên" name="lastname" required><br><br>
+                <input type="text" class="signup-email" placeholder="Email" name="email" required><br><br>
+                <input type="password" class="signup-password" placeholder="Mật khẩu" name="password" required><br><br>
+                <input type="password" class="signup-cfpassword" placeholder="Xác nhận mật khẩu" name="cfpassword" required><br><br>
+                <div class="signup-footer">
+                    <p>
+                        <input type="checkbox" class="signup-agree"> Tôi chấp nhận với tất cả <a href="#">Điều khoản dịch vụ</a> & <a href="">Chính sách bảo mật</a>
+                    </p>
+                    <button type="submit" class="signupbtn">Đăng ký</button>
+                    <p>Bạn đã có tài khoản? <a href="" >Đăng nhập ở đây</a></p>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script src="js/index.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+</body>
+</html>
