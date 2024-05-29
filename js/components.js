@@ -1,6 +1,5 @@
 // Đổ data vào html
 let product_items = document.getElementById("product_items");
-
 function showProducts(image, name, price, sold, brand, place)
 {
     product_items.insertAdjacentHTML('beforeEnd', 
@@ -25,14 +24,12 @@ function showProducts(image, name, price, sold, brand, place)
     `
     )
 }
-
 // Mặc định show tất cả sản phẩm
 product_items.innerHTML = '';
 for(let i = 0; i < products.length; i++)
 {
     showProducts(products[i].image, products[i].name, products[i].price, products[i].sold, products[i].brand, products[i].place);
 }
-
 // Show tất cả sản phẩm khi click vào
 let showAll = document.getElementById('all');
 showAll.addEventListener('click', () => {
@@ -42,7 +39,6 @@ showAll.addEventListener('click', () => {
         showProducts(products[i].image, products[i].name, products[i].price, products[i].sold, products[i].brand, products[i].place);
     }
 })
-
 // Show thiết bị điện tử
 let showTBDT = document.getElementById('thietBiDienTu');
 showTBDT.addEventListener('click', () => {
